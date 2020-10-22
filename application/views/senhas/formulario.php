@@ -27,6 +27,7 @@ echo form_password(array(
 ));
 echo form_error("senha");
 
+echo form_label("Descricao", "descricao");
 echo form_textarea(array(
 	"name" => "descricao",
 	"class" => "form-control",
