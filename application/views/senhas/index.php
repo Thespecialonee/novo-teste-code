@@ -15,9 +15,6 @@
 
 
 		<?php if ($this->session->userdata("usuario_logado")) : ?>
-			<?= anchor('senhas/formulario', 'Nova senha', array("class" => "btn btn-primary")) ?>
-			<?= anchor('login/logout', 'Logout', array("class" => "btn btn-primary")) ?>
-
 			<h1>Senhas</h1>
 		<table class="table">
 			<?php foreach ($senhas as $senha) : ?>
@@ -30,6 +27,8 @@
 				</tr>
 			<?php endforeach; ?>
 		</table>
+		<?= anchor('senhas/formulario', 'Nova senha', array("class" => "btn btn-primary")) ?>
+			<?= anchor('login/logout', 'Logout', array("class" => "btn btn-primary")) ?>
 
 		<?php else : ?>
 
