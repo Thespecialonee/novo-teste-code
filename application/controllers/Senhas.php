@@ -24,11 +24,13 @@ class Senhas extends CI_Controller
 
 	public function formulario()
 	{
+		autoriza();
 		$this->load->view("senhas/formulario");
 	}
 
 	public function novo()
-	{
+	{	
+		$usuarioLogado = autoriza();
 		$this->form_validation->set_rules("nome", "nome", "required|min_length[5]");
 		$this->form_validation->set_rules("senha", "senha", "required");
 		$this->form_validation->set_rules("descricao", "descricao", "trim|required|min_length[10]");
@@ -36,7 +38,6 @@ class Senhas extends CI_Controller
 
 		$sucesso = $this->form_validation->run();
 		if ($sucesso) {
-			$usuarioLogado = $this->session->userdata("usuario_logado");
 			$senha = array(
 			"passwords_user" => $this->input->post("nome"),
 			"passwords_password" => $this->input->post("senha"),

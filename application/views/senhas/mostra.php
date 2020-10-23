@@ -9,7 +9,7 @@
 	Descricao: <?= auto_typography(html_escape($senha["description"]))?>
 	Data de insercao: <?= html_escape($senha["data_de_insercao"])?></br>
 
-	<?= anchor('senhas/index', 'Voltar') ?>
+	<?= anchor('senhas/index', 'Voltar', array("class" => "btn btn-primary")) ?>
 </div>
 </body>
 </html>
