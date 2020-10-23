@@ -36,6 +36,15 @@ echo form_textarea(array(
 ));
 echo form_error("descricao");
 
+echo form_label("Data Insercao", "data");
+echo form_input(array(
+	"name" => "data",
+	"id" => "data",
+	"class" => "form-control",
+	"maxlength" => "255",
+	"value" => set_value("data", "")
+));
+
 echo form_button(array(
 	"class" => "btn btn-primary",
 	"content" => "Cadastrar",

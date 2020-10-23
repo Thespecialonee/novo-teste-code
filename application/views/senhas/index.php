@@ -26,6 +26,7 @@
 					<td><?= html_escape($senha["passwords_password"])?></td>
 					<td><?= character_limiter(html_escape($senha["description"]), 10)?></td>
 					<td><?= html_escape($senha["user_id"])?></td>
+					<td><?= html_escape($senha["data_de_insercao"])?></td>
 				</tr>
 			<?php endforeach; ?>
 		</table>

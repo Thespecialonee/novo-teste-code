@@ -41,7 +41,8 @@ class Senhas extends CI_Controller
 			"passwords_user" => $this->input->post("nome"),
 			"passwords_password" => $this->input->post("senha"),
 			"description" => $this->input->post("descricao"),
-			"user_id" => $usuarioLogado["id"]
+			"user_id" => $usuarioLogado["id"],
+			"data_de_insercao" =>dataPtBrMysql($this->input->post("data"))
 			);
 			$this->load->model("senhas_model");
 			$this->senhas_model->salva($senha);
