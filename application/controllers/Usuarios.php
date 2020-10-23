@@ -20,8 +20,10 @@ class Usuarios extends CI_Controller
 
 			$this->load->model("usuarios_model");
 			$this->usuarios_model->salva($usuarios);
-			redirect("usuarios/novo");
+			$this->session->set_flashdata("success", "Cadastro realizado com sucesso");
+			redirect("/");
 		} else {
+			$this->session->set_flashdata("danger", "Nao foi possivel realizar o cadastro");
 			$this->load->view("senhas/index");
 		}
 	}
