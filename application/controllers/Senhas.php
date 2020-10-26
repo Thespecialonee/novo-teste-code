@@ -9,7 +9,7 @@ class Senhas extends CI_Controller
 		$senha = $this->senhas_model->busca($id);
 
 		$dados = array("senha" => $senha);
-		$this->load->view("senhas/mostra", $dados);
+		$this->load->template("senhas/mostra", $dados);
 	}
 
 	public function index()
@@ -19,13 +19,13 @@ class Senhas extends CI_Controller
 
 
 		$dados = array("senhas" => $senhas);
-		$this->load->view("senhas/index.php", $dados);
+		$this->load->template("senhas/index.php", $dados);
 	}
 
 	public function formulario()
 	{
 		autoriza();
-		$this->load->view("senhas/formulario");
+		$this->load->template("senhas/formulario");
 	}
 
 	public function novo()
@@ -50,7 +50,7 @@ class Senhas extends CI_Controller
 			$this->session->set_flashdata("success", "Senha salva com sucesso");
 			redirect("/");
 		} else {
-			$this->load->view("senhas/formulario");
+			$this->load->template("senhas/formulario");
 		}
 
 	}

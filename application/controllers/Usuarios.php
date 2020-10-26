@@ -24,7 +24,7 @@ class Usuarios extends CI_Controller
 			redirect("/");
 		} else {
 			$this->session->set_flashdata("danger", "Nao foi possivel realizar o cadastro");
-			$this->load->view("senhas/index");
+			$this->load->template("senhas/index");
 		}
 	}
 

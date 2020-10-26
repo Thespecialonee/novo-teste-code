@@ -1,9 +1,4 @@
-<html lang="en">
-<head>
-	<link rel="stylesheet" href="<?= base_url("css/bootstrap.css") ?>">
-</head>
-<body>
-<div class="container">
+
 	<h1>Cadastro de nova Senha</h1>
 <?php
 echo form_open("Senhas/novo");
@@ -54,6 +49,3 @@ echo form_button(array(
 
 echo form_close();
 ?>
-</div>
-</body>
-</html>
