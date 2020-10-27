@@ -9,7 +9,7 @@ echo form_input(array(
 	"class" => "form-control",
 	"id" => "nome",
 	"maxlength" => "255",
-	"value" => set_value("nome", "")
+	"value" => set_value("nome", ""),
 ));
 echo form_error("nome");
 
@@ -18,7 +18,7 @@ echo form_password(array(
 	"name" => "senha",
 	"class" => "form-control",
 	"id" => "senha",
-	"maxlength" => "255"
+	"maxlength" => "255",
 ));
 echo form_error("senha");
 
@@ -27,7 +27,7 @@ echo form_textarea(array(
 	"name" => "descricao",
 	"class" => "form-control",
 	"id" => "descricao",
-	"value" => set_value("descricao", "")
+	"value" => set_value("descricao", ""),
 ));
 echo form_error("descricao");
 
@@ -37,15 +37,14 @@ echo form_input(array(
 	"id" => "data",
 	"class" => "form-control",
 	"maxlength" => "255",
-	"value" => set_value("data", "")
+	"value" => set_value("data", ""),
 ));
 
 echo form_button(array(
 	"class" => "btn btn-primary",
 	"content" => "Cadastrar",
-	"type" => "submit"
+	"type" => "submit",
 ));
-
 
 echo form_close();
 ?>
